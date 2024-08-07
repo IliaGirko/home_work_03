@@ -21,3 +21,15 @@ def filter_by_state(
 
 # print(filter_by_state(input_data, state ='CANCELED'))
 print(filter_by_state(input_data))
+
+
+def sort_by_date(
+    list_of_dictionaries_date: list[dict[str, str | int]], direction: bool = True
+) -> list[dict[str, str | int]]:
+    """Функция сортирует список словарей по дате"""
+    sorted_list_of_dictionaries_date = sorted(list_of_dictionaries_date, key=lambda x: x["date"], reverse=direction)
+    return sorted_list_of_dictionaries_date
+
+
+print(sort_by_date(input_data, direction=False))
+# print(sort_by_date(input_data))
